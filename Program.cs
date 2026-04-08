@@ -12,12 +12,12 @@ builder.Services.AddControllers();
 
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(
-    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options => options.UseInMemoryDatabase("BikeRentalDb") // Use InMemory for demo to avoid SQL Server dependency
 );
 
 // Configure JWT Authentication
-var jwtKey = builder.Configuration["Jwt:Key"];
-var jwtDuration = int.Parse(builder.Configuration["Jwt:DurationInMinutes"]);
+var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key is missing.");
+var jwtDuration = int.Parse(builder.Configuration["Jwt:DurationInMinutes"] ?? "60");
 
 builder.Services.AddAuthentication(options =>
 {
@@ -43,6 +43,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
