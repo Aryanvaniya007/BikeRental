@@ -55,14 +55,22 @@ namespace BikeRental.Services
             // Duration-based pricing: > 24 hours = daily rate
             if (duration.TotalHours >= 24)
             {
+<<<<<<< HEAD
                 var days = (decimal)Math.Ceiling(duration.TotalHours / 24);
+=======
+                var days = Math.Ceiling(duration.TotalHours / 24);
+>>>>>>> ff3bf0158343136f073dc12483c35413107580d9
                 var dailyTotal = rental.Bike.DailyRate * days;
                 return Math.Round(dailyTotal * multiplier, 2);
             }
             else
             {
                 // Hourly pricing with minimum 1 hour
+<<<<<<< HEAD
                 var hours = (decimal)Math.Ceiling(duration.TotalHours);
+=======
+                var hours = Math.Ceiling(duration.TotalHours);
+>>>>>>> ff3bf0158343136f073dc12483c35413107580d9
                 if (hours < 1) hours = 1;
 
                 var hourlyTotal = rental.Bike.HourlyRate * hours;
@@ -98,7 +106,11 @@ namespace BikeRental.Services
 
             if (estimatedHours >= 24)
             {
+<<<<<<< HEAD
                 var days = (decimal)Math.Ceiling(estimatedHours / 24.0);
+=======
+                var days = Math.Ceiling(estimatedHours / 24.0);
+>>>>>>> ff3bf0158343136f073dc12483c35413107580d9
                 return Math.Round(bike.DailyRate * days * multiplier, 2);
             }
             else

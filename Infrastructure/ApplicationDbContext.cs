@@ -55,11 +55,19 @@ namespace BikeRental.Infrastructure.Data
                     .HasForeignKey(e => e.UserId)
                     .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
 
+<<<<<<< HEAD
                     //entity.HasMany(e => e.Payments)
                     //    .WithOne(e => e.Rental)
                     //    .HasForeignKey(e => e.RentalId)
                     //    .OnDelete(DeleteBehavior.Cascade);
                 });
+=======
+                entity.HasMany(e => e.Payments)
+                    .WithOne(e => e.Rental)
+                    .HasForeignKey(e => e.RentalId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+>>>>>>> ff3bf0158343136f073dc12483c35413107580d9
 
             // ==========================================
             // Bike Entity Configuration
