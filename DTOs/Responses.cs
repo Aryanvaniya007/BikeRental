@@ -90,7 +90,10 @@ namespace BikeRental.DTOs.Responses
         public string? Location { get; set; }
         public decimal HourlyRate { get; set; }
         public decimal DailyRate { get; set; }
+<<<<<<< HEAD
         public string? ContactNumber { get; set; }
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
     }
 
     /// <summary>
@@ -144,6 +147,7 @@ namespace BikeRental.DTOs.Responses
         public double DurationHours { get; set; }
         public decimal? EstimatedAmount { get; set; }
     }
+<<<<<<< HEAD
 
     /// <summary>
     /// DTO for a user's rental history.
@@ -180,4 +184,6 @@ namespace BikeRental.DTOs.Responses
         public DateTime CreatedAt { get; set; }
         public int? RelatedRentalId { get; set; }
     }
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
 }

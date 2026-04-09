@@ -56,11 +56,14 @@ namespace BikeRental.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         /// <summary>
+<<<<<<< HEAD
         /// Gets or sets the current balance in the user's wallet.
         /// </summary>
         public decimal WalletBalance { get; set; } = 0.00m;
 
         /// <summary>
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
         /// Timestamp when the user record was last updated (UTC).
         /// </summary>
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
@@ -74,5 +77,12 @@ namespace BikeRental.Models
         /// </summary>
         public virtual ICollection<RentalSession> RentalSessions { get; set; } = new List<RentalSession>();
 
+<<<<<<< HEAD
+=======
+        /// <summary>
+        /// Collection of payments made by this user.
+        /// </summary>
+        public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
     }
 }

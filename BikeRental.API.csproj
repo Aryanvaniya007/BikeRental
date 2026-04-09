@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5">
@@ -16,8 +19,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
+<<<<<<< HEAD
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
     <PackageReference Include="Scalar.AspNetCore" Version="2.13.20" />
+=======
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
   </ItemGroup>
 
 </Project>

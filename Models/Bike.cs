@@ -68,11 +68,14 @@ namespace BikeRental.Models
         public decimal DailyRate { get; set; } = 30.00m;
 
         /// <summary>
+<<<<<<< HEAD
         /// Optional contact phone number for the bike owner/manager (e.g., +1234567890).
         /// </summary>
         public string? ContactNumber { get; set; }
 
         /// <summary>
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
         /// Timestamp when the bike record was created (UTC).
         /// </summary>
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

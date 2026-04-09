@@ -21,7 +21,10 @@ namespace BikeRental.Infrastructure.Data
         public DbSet<Bike> Bikes { get; set; }
         public DbSet<RentalSession> RentalSessions { get; set; }
         public DbSet<Payment> Payments { get; set; }
+<<<<<<< HEAD
         public DbSet<WalletTransaction> WalletTransactions { get; set; }
+=======
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
 
         /// <summary>
         /// Configures entity relationships and constraints.
@@ -56,7 +59,23 @@ namespace BikeRental.Infrastructure.Data
                     .HasForeignKey(e => e.UserId)
                     .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
 
+<<<<<<< HEAD
             });
+=======
+<<<<<<< HEAD
+                    //entity.HasMany(e => e.Payments)
+                    //    .WithOne(e => e.Rental)
+                    //    .HasForeignKey(e => e.RentalId)
+                    //    .OnDelete(DeleteBehavior.Cascade);
+                });
+=======
+                entity.HasMany(e => e.Payments)
+                    .WithOne(e => e.Rental)
+                    .HasForeignKey(e => e.RentalId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+>>>>>>> ff3bf0158343136f073dc12483c35413107580d9
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
 
             // ==========================================
             // Bike Entity Configuration
@@ -188,8 +207,13 @@ namespace BikeRental.Infrastructure.Data
                     IsAdmin = true,
                     FullName = "System Admin",
                     Email = "admin@bikerental.com",
+<<<<<<< HEAD
                     CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc),
                     UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+=======
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
                 },
                 new User
                 {
@@ -199,8 +223,13 @@ namespace BikeRental.Infrastructure.Data
                     IsAdmin = false,
                     FullName = "John Doe",
                     Email = "john@example.com",
+<<<<<<< HEAD
                     CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc),
                     UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+=======
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
                 }
             );
 
@@ -213,8 +242,13 @@ namespace BikeRental.Infrastructure.Data
                     Location = "Central Station",
                     HourlyRate = 6.00m,
                     DailyRate = 35.00m,
+<<<<<<< HEAD
                     CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc),
                     UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+=======
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
                 },
                 new Bike
                 {
@@ -224,8 +258,13 @@ namespace BikeRental.Infrastructure.Data
                     Location = "City Park",
                     HourlyRate = 5.00m,
                     DailyRate = 28.00m,
+<<<<<<< HEAD
                     CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc),
                     UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+=======
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
                 },
                 new Bike
                 {
@@ -235,8 +274,13 @@ namespace BikeRental.Infrastructure.Data
                     Location = "Harbor Point",
                     HourlyRate = 7.00m,
                     DailyRate = 40.00m,
+<<<<<<< HEAD
                     CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc),
                     UpdatedAt = new DateTime(2026, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+=======
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+>>>>>>> 9d1ea28f7fb269cff41e45279fc921029eb77566
                 }
             );
         }
